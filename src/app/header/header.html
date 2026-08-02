@@ -1,9 +1,26 @@
-<div class="header">
-  <nav aria-label="Menu principal">
+<div class="header" [class.is-menu-open]="isMenuOpen">
+  <div class="header-bar">
+    <a class="header-brand" href="/">Luisa Medrado</a>
+
+    <button
+      class="header-toggle"
+      type="button"
+      aria-label="Abrir menu"
+      aria-controls="primary-menu"
+      [attr.aria-expanded]="isMenuOpen"
+      (click)="toggleMenu()"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <nav id="primary-menu" aria-label="Menu principal">
     <ul class="header-menu">
       @for (item of navItems; track item.label) {
         <li class="menu-entry">
-          <a class="menu-item" [href]="item.href">
+          <a class="menu-item" [href]="item.href" (click)="closeMenu()">
             <span class="menu-image-frame">
               <span class="menu-image-mask">
                 <img class="menu-image" [src]="item.image" [alt]="item.alt" />

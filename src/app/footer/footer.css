@@ -86,6 +86,7 @@
   font-weight: 400;
   line-height: 1.2;
   text-align: center;
+  word-break: break-word;
 }
 
 .footer-social a:hover,
@@ -118,6 +119,10 @@
     gap: 20px;
     padding-top: 0;
   }
+
+  .footer-email {
+    text-align: left;
+  }
 }
 
 @media (max-width: 520px) {
@@ -129,6 +134,11 @@
   }
 
   .footer-copy {
+    gap: 18px;
+  }
+
+  .footer-social {
+    flex-wrap: wrap;
     gap: 18px;
   }
 }

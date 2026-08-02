@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './header.css',
 })
 export class Header {
+  isMenuOpen = false;
+
   readonly navItems = [
     {
       label: 'Sobre mim',
@@ -38,4 +40,12 @@ export class Header {
       alt: 'Imagem para a seção Contato',
     },
   ];
+
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu(): void {
+    this.isMenuOpen = false;
+  }
 }

@@ -180,11 +180,17 @@
   .lulu-content {
     flex-direction: column;
     align-items: stretch;
+    gap: 36px;
   }
 
   .lulu-star-top {
     right: 8%;
     left: auto;
+  }
+
+  .post-card {
+    align-self: center;
+    max-width: 430px;
   }
 
   .lulu-copy {
@@ -201,6 +207,10 @@
     --top-star-top: -30px;
     --bottom-star-bottom: -46px;
     --bottom-star-left: -42px;
+  }
+
+  .lulu-content {
+    gap: 24px;
   }
 
   .post-card-header {
@@ -231,6 +241,11 @@
   }
 
   .lulu-copy p {
-    font-size: 18px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .lulu-copy p + p {
+    margin-top: 20px;
   }
 }

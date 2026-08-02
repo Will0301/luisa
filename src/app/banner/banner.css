@@ -121,6 +121,38 @@
   white-space: nowrap;
 }
 
+@media (max-width: 1024px) {
+  :host {
+    --banner-padding-top: 72px;
+    --banner-padding-inline: 40px;
+    --banner-padding-bottom: 80px;
+    --banner-title-size: 22px;
+    --brandmark-width: 900px;
+    --brandmark-margin-top: 60px;
+    --brandmark-min-height: 340px;
+    --star-left: 105px;
+    --star-top: 23px;
+    --star-width: 210px;
+    --signature-right: 0px;
+    --signature-bottom: 100px;
+    --signature-size: 44px;
+  }
+
+  .banner {
+    min-height: 680px;
+  }
+
+  .buttons {
+    gap: 18px;
+    margin-top: 36px;
+  }
+
+  .buttons span {
+    padding-inline: 20px;
+    font-size: 20px;
+  }
+}
+
 @media (max-width: 960px) {
   :host {
     --banner-padding-top: 64px;
@@ -128,13 +160,13 @@
     --banner-padding-bottom: 72px;
     --banner-title-size: 20px;
     --brandmark-margin-top: 52px;
-    --brandmark-min-height: 300px;
-    --star-left: 74px;
-    --star-top: 20px;
+    --brandmark-min-height: 250px;
+    --star-left: 72px;
+    --star-top: 13px;
     --star-width: 180px;
     --star-offset-x: 0px;
     --star-offset-y: 0px;
-    --signature-bottom: 0;
+    --signature-bottom: 60px;
     --signature-size: 40px;
     --signature-offset-x: 0px;
     --signature-offset-y: 0px;
@@ -160,26 +192,41 @@
     --banner-title-size: 16px;
     --brandmark-margin-top: 36px;
     --brandmark-min-height: 170px;
-    --star-left: 32px;
-    --star-top: 8px;
+    --star-left: 50px;
+    --star-top: 13px;
     --star-width: 84px;
     --star-offset-x: 0px;
     --star-offset-y: 0px;
     --signature-right: -2px;
-    --signature-bottom: -6px;
-    --signature-size: 20px;
+    --signature-bottom: 50px;
+    --signature-size: 30px;
     --signature-offset-x: 0px;
     --signature-offset-y: 0px;
   }
 
   .buttons {
+    flex-direction: column;
+    align-items: stretch;
     gap: 12px;
     margin-top: 32px;
   }
 
   .buttons span {
+    width: 100%;
+    min-width: 0;
     padding-inline: 18px;
     height: 40px;
     font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  :host {
+    --brandmark-min-height: 100px;
+    --star-left: 30px;
+    --star-top: 5px;
+    --star-width: 74px;
+    --signature-size: 18px;
+    --signature-bottom: 20px;
   }
 }

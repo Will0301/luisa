@@ -185,15 +185,16 @@
     --contact-stars-left-width: 250px;
     --contact-stars-right-width: 250px;
     /* Ajuste fino do portfolio no tablet/grandes telas */
-    --contact-logo-height: 306px;
-    --contact-logo-bleed: 24px;
+    --contact-logo-height: 250px;
+    --contact-logo-bleed: 50px;
     --contact-signature-size: 46px;
-    --contact-signature-bottom: 188px;
+    --contact-signature-bottom: 150px;
   }
 }
 
 @media (max-width: 900px) {
   :host {
+    --contact-min-height: auto;
     --contact-padding-top: 32px;
     --contact-padding-inline: 20px;
     --contact-padding-bottom: 0px;
@@ -206,15 +207,24 @@
     --contact-cta-padding-inline: 24px;
     --contact-brand-margin-top: 18px;
     /* Ajuste fino do portfolio no tablet */
-    --contact-logo-height: 248px;
-    --contact-logo-bleed: 18px;
+    --contact-logo-height: 190px;
+    --contact-logo-bleed: 40px;
     --contact-signature-size: 34px;
-    --contact-signature-bottom: 146px;
+    --contact-signature-bottom: 100px;
+  }
+
+  .contact-inner {
+    align-items: center;
+  }
+
+  .contact-brand {
+    width: 100%;
   }
 }
 
 @media (max-width: 620px) {
   :host {
+    --contact-min-height: auto;
     --contact-padding-inline: 16px;
     --contact-padding-bottom: 0px;
     --contact-stars-left-width: 120px;
@@ -224,10 +234,10 @@
     --contact-cta-gap: 20px;
     --contact-button-height: 46px;
     /* Ajuste fino do portfolio no mobile */
-    --contact-logo-height: 164px;
-    --contact-logo-bleed: 12px;
+    --contact-logo-height: 80px;
+    --contact-logo-bleed: 15px;
     --contact-signature-size: 22px;
-    --contact-signature-bottom: 96px;
+    --contact-signature-bottom: 40px;
   }
 
   .contact-cta h2 {
@@ -235,7 +245,15 @@
     line-height: 1.25;
   }
 
+  .contact-button {
+    font-size: 13px;
+  }
+
   .contact-brand {
-    padding-top: 18px;
+    padding-top: 12px;
+  }
+
+  .contact-signature {
+    line-height: 1.05;
   }
 }

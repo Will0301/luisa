@@ -115,6 +115,11 @@
   .servicos-grid {
     grid-template-columns: 1fr;
   }
+
+  .servico-list {
+    margin-left: 18px;
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 560px) {
@@ -130,5 +135,13 @@
 
   .servico-card {
     padding: 16px;
+  }
+
+  .servicos-subheader h1 {
+    line-height: 1.1;
+  }
+
+  .servico-list {
+    line-height: 1.75;
   }
 }

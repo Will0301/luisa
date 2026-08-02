@@ -295,6 +295,7 @@
   .projects-head {
     flex-direction: column;
     align-items: flex-start;
+    gap: 16px;
   }
 
   .projects-grid {
@@ -317,25 +318,31 @@
   :host {
     --projects-padding: 24px 16px 32px;
     --projects-thumb-height: 210px;
-    --projects-title-size: 34px;
-    --projects-category-size: 20px;
-    --projects-tags-size: 16px;
-    --projects-tool-height: 32px;
+    --projects-title-size: 30px;
+    --projects-category-size: 18px;
+    --projects-tags-size: 14px;
+    --projects-tool-height: 28px;
     --services-card-padding: 16px;
     --services-image-height: 220px;
-    --services-title-size: 24px;
-    --services-body-size: 16px;
+    --services-title-size: 22px;
+    --services-body-size: 15px;
     --services-button-height: 54px;
     --resume-height: 104px;
     --resume-padding-inline: 20px;
-    --resume-title-size: 26px;
+    --resume-title-size: 22px;
     --resume-button-width: 142px;
     --resume-button-height: 52px;
   }
 
   .projects-tools {
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 4px;
+  }
+
+  .tool-badge {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
   }
 
   .projects-grid {
@@ -345,6 +352,14 @@
 
   .project-card {
     gap: 14px;
+  }
+
+  .services-card {
+    gap: 20px;
+  }
+
+  .services-card-copy {
+    gap: 16px;
   }
 
   .resume-banner {
