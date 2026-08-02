@@ -1,0 +1,134 @@
+:host {
+  --footer-width: 1100px;
+  --footer-height: 193px;
+  --footer-padding-block: 50px;
+  --footer-padding-inline: 100px;
+  --footer-name-size: 24px;
+  --footer-body-size: 18px;
+  --footer-email-size: 18px;
+  --footer-icon-size: 18px;
+  --footer-social-gap: 24px;
+
+  display: block;
+}
+
+.footer {
+  background: #0a0a0a;
+}
+
+.footer-inner {
+  width: min(100%, var(--footer-width));
+  min-height: var(--footer-height);
+  margin: 0 auto;
+  padding: var(--footer-padding-block) var(--footer-padding-inline);
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-copy {
+  max-width: 466px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-copy h2,
+.footer-copy p,
+.footer-email {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+.footer-copy h2 {
+  font-size: var(--footer-name-size);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.footer-copy p {
+  font-size: var(--footer-body-size);
+  font-weight: 400;
+  line-height: 1.22;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 24px;
+  padding-top: 4px;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: var(--footer-social-gap);
+}
+
+.footer-social a,
+.footer-social span,
+.footer-email {
+  text-decoration: none;
+}
+
+.footer-social img {
+  width: var(--footer-icon-size);
+  height: var(--footer-icon-size);
+  display: block;
+}
+
+.footer-email {
+  font-size: var(--footer-email-size);
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.footer-social a:hover,
+.footer-email:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 1100px) {
+  :host {
+    --footer-padding-inline: 32px;
+    --footer-body-size: 18px;
+    --footer-email-size: 16px;
+  }
+}
+
+@media (max-width: 760px) {
+  :host {
+    --footer-padding-block: 32px;
+    --footer-padding-inline: 20px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-contact {
+    width: 100%;
+    align-items: flex-start;
+    gap: 20px;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 520px) {
+  :host {
+    --footer-padding-inline: 16px;
+    --footer-name-size: 22px;
+    --footer-body-size: 16px;
+    --footer-email-size: 14px;
+  }
+
+  .footer-copy {
+    gap: 18px;
+  }
+}

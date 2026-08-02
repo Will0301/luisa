@@ -1,0 +1,68 @@
+<section id="projects" class="projects" aria-label="Projetos">
+  <div class="projects-inner">
+    <div class="projects-head">
+      <h2 class="projects-title">Projetos</h2>
+
+      <div class="projects-tools" aria-label="Ferramentas">
+        @for (tool of tools; track tool.src) {
+          <span class="tool-badge" [class]="tool.className">
+            <img [src]="tool.src" [alt]="tool.alt" />
+          </span>
+        }
+      </div>
+    </div>
+
+    <div class="projects-grid">
+      @for (project of projects; track project.title) {
+        <a
+          class="project-card"
+          routerLink="/projetos"
+          [queryParams]="project.routeProject ? { project: project.routeProject } : null"
+          [attr.aria-label]="'Abrir projetos de ' + project.title"
+        >
+          <div class="project-thumb">
+            <img [src]="project.image" [alt]="project.title" />
+          </div>
+          <p class="project-category">{{ project.title }}</p>
+          <p class="project-tags">{{ project.subtitle }}</p>
+        </a>
+      }
+    </div>
+
+    <section id="services" class="services-card" aria-label="Serviços">
+      <div class="services-card-image">
+        <img
+          src="/assets/figma-home/services-preview.png"
+          alt="Arte de divulgação de freelas"
+        />
+      </div>
+
+      <div class="services-card-copy">
+        <h3>Serviços</h3>
+        <p>
+          Eu também faço freelas! Caso tenha interesse nessa modalidade, você
+          pode verificar mais informações sobre os serviços que presto. Caso
+          tenha interesse, basta entrar em contato e podemos desenvolver um
+          baita projeto para seu negócio! Vamos criar juntos?
+        </p>
+        <a class="services-button" routerLink="/servicos">Ver serviços</a>
+      </div>
+    </section>
+
+    <section id="resume" class="resume-banner" aria-label="Currículo">
+      <h3>Currículo</h3>
+
+      <a
+        class="resume-button"
+        href="/assets/curriculo/Luísa%20Medrado%20-%20Currículo.pdf"
+        download="Luisa-Medrado-Curriculo.pdf"
+      >
+        <span>Baixar</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 4v11" />
+          <path d="m7 12 5 5 5-5" />
+        </svg>
+      </a>
+    </section>
+  </div>
+</section>

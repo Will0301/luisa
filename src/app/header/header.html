@@ -1,0 +1,18 @@
+<div class="header">
+  <nav aria-label="Menu principal">
+    <ul class="header-menu">
+      @for (item of navItems; track item.label) {
+        <li class="menu-entry">
+          <a class="menu-item" [href]="item.href">
+            <span class="menu-image-frame">
+              <span class="menu-image-mask">
+                <img class="menu-image" [src]="item.image" [alt]="item.alt" />
+              </span>
+            </span>
+            <span class="menu-label">{{ item.label }}</span>
+          </a>
+        </li>
+      }
+    </ul>
+  </nav>
+</div>

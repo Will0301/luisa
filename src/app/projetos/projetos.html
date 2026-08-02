@@ -1,0 +1,33 @@
+<app-header></app-header>
+
+<main class="projetos-page">
+  <section class="project-stage">
+    <div class="project-head">
+      <div class="project-heading">
+        <h1>{{ activeProject.title }}</h1>
+        <p>{{ activeProject.subtitle }}</p>
+      </div>
+
+      <div class="project-toolbar">
+        <div class="project-switcher" aria-label="Trocar projeto">
+          <button type="button" (click)="previousProject()" aria-label="Projeto anterior">
+            &#8249;
+          </button>
+          <button type="button" (click)="nextProject()" aria-label="Próximo projeto">
+            &#8250;
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-mosaic" aria-label="Mosaico do projeto ativo">
+      @for (image of activeProject.heroImages; track image) {
+        <figure class="mosaic-card">
+          <img [src]="image" [alt]="activeProject.brand" />
+        </figure>
+      }
+    </div>
+  </section>
+  </main>
+
+<app-footer></app-footer>

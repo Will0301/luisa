@@ -1,0 +1,236 @@
+:host {
+  --lulu-padding-top: 100px;
+  --lulu-padding-inline: 100px;
+  --lulu-padding-bottom: 100px;
+  --lulu-gap: 100px;
+  --top-star-size: 293px;
+  --top-star-top: -58px;
+  --top-star-left: 350px;
+  --bottom-star-size: 293px;
+  --bottom-star-bottom: -108px;
+  --bottom-star-left: -12px;
+  --card-width: 358px;
+  --card-radius: 16px;
+  --card-aspect-ratio: 877 / 1080;
+
+  display: block;
+}
+
+.lulu {
+  position: relative;
+  overflow: hidden;
+  padding:
+    var(--lulu-padding-top)
+    var(--lulu-padding-inline)
+    var(--lulu-padding-bottom);
+  background: #9900FF;
+}
+
+.lulu-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--lulu-gap);
+}
+
+.lulu-star {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.lulu-star-top {
+  top: var(--top-star-top);
+  left: var(--top-star-left);
+  width: var(--top-star-size);
+  height: auto;
+}
+
+.lulu-star-bottom {
+  bottom: var(--bottom-star-bottom);
+  left: var(--bottom-star-left);
+  width: var(--bottom-star-size);
+  height: auto;
+}
+
+.post-card {
+  width: min(100%, var(--card-width));
+  flex: 0 0 auto;
+}
+
+.post-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+}
+
+.post-card-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: 0 0 auto;
+}
+
+.post-card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+.post-card-name {
+  color: #2b2b2b;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.post-card-location {
+  color: #666666;
+  font-size: 8px;
+  line-height: 1.2;
+}
+
+.post-card-media {
+  width: 100%;
+  aspect-ratio: var(--card-aspect-ratio);
+}
+
+.post-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.post-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+}
+
+.post-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.post-card-actions img,
+.post-card-save img {
+  width: 23px;
+  height: 23px;
+  display: block;
+  flex: 0 0 auto;
+}
+
+.lulu-copy {
+  max-width: 422px;
+  display: flex;
+  flex-direction: column;
+}
+
+.lulu-copy p {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.lulu-copy p + p {
+  margin-top: 30px;
+}
+
+@media (max-width: 1100px) {
+  :host {
+    --lulu-padding-inline: 32px;
+    --lulu-gap: 48px;
+    --top-star-size: 220px;
+    --top-star-top: -42px;
+    --top-star-left: 210px;
+    --bottom-star-size: 220px;
+    --bottom-star-bottom: -82px;
+    --bottom-star-left: -20px;
+  }
+}
+
+@media (max-width: 900px) {
+  :host {
+    --lulu-padding-top: 64px;
+    --lulu-padding-bottom: 64px;
+    --card-width: 100%;
+    --top-star-size: 180px;
+    --top-star-top: -34px;
+    --top-star-left: auto;
+    --bottom-star-size: 170px;
+    --bottom-star-bottom: -56px;
+    --bottom-star-left: -34px;
+  }
+
+  .lulu-content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .lulu-star-top {
+    right: 8%;
+    left: auto;
+  }
+
+  .lulu-copy {
+    max-width: none;
+  }
+}
+
+@media (max-width: 560px) {
+  :host {
+    --lulu-padding-inline: 16px;
+    --lulu-gap: 28px;
+    --top-star-size: 160px;
+    --bottom-star-size: 130px;
+    --top-star-top: -30px;
+    --bottom-star-bottom: -46px;
+    --bottom-star-left: -42px;
+  }
+
+  .post-card-header {
+    padding-inline: 14px;
+  }
+
+  .post-card-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .post-card-name {
+    font-size: 10px;
+  }
+
+  .post-card-location {
+    font-size: 8px;
+  }
+
+  .post-card-footer {
+    padding: 14px 14px 16px;
+  }
+
+  .post-card-actions img,
+  .post-card-save img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .lulu-copy p {
+    font-size: 18px;
+  }
+}

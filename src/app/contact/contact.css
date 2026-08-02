@@ -1,0 +1,241 @@
+:host {
+  --contact-width: 1100px;
+  --contact-min-height: 554px;
+  --contact-padding-top: 40px;
+  --contact-padding-inline: 100px;
+  --contact-padding-bottom: 0px;
+  --contact-stars-left-width: 309px;
+  --contact-stars-left-top: -46px;
+  --contact-stars-left-left: -54px;
+  --contact-stars-right-width: 309px;
+  --contact-stars-right-top: -50px;
+  --contact-stars-right-right: -48px;
+  --contact-cta-width: 626px;
+  --contact-cta-padding-block: 40px;
+  --contact-cta-padding-inline: 75px;
+  --contact-cta-gap: 30px;
+  --contact-actions-gap: 8px;
+  --contact-button-width: 476px;
+  --contact-button-height: 49px;
+  --contact-brand-width: 1100px;
+  --contact-brand-margin-top: 10px;
+  /* Ajuste fino do portfolio no desktop: altura total do logo */
+  --contact-logo-height: 250px;
+  /* Ajuste fino do portfolio no desktop: quanto ele desce em direcao ao footer */
+  --contact-logo-bleed: 49px;
+  --contact-signature-size: 55px;
+  --contact-signature-bottom: 140px;
+
+  display: block;
+}
+
+.contact {
+  position: relative;
+  overflow: hidden;
+  background: #9900ff;
+}
+
+.contact-inner {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 1300px);
+  min-height: var(--contact-min-height);
+  margin: 0 auto;
+  padding:
+    var(--contact-padding-top)
+    var(--contact-padding-inline)
+    var(--contact-padding-bottom);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-stars {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  display: block;
+}
+
+.contact-stars-left {
+  width: var(--contact-stars-left-width);
+  top: var(--contact-stars-left-top);
+  left: var(--contact-stars-left-left);
+}
+
+.contact-stars-right {
+  width: var(--contact-stars-right-width);
+  top: var(--contact-stars-right-top);
+  right: var(--contact-stars-right-right);
+  transform: rotate(90deg);
+}
+
+.contact-cta {
+  width: min(100%, var(--contact-cta-width));
+  padding:
+    var(--contact-cta-padding-block)
+    var(--contact-cta-padding-inline);
+  box-sizing: border-box;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--contact-cta-gap);
+}
+
+.contact-cta h2 {
+  margin: 0;
+  width: min(100%, 476px);
+  color: #ffffff;
+  text-align: center;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+}
+
+.contact-actions {
+  width: min(100%, 476px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--contact-actions-gap);
+}
+
+.contact-button {
+  width: min(100%, var(--contact-button-width));
+  height: var(--contact-button-height);
+  border: 0;
+  border-radius: 10px;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-button:hover {
+  transform: translateY(-1px);
+  opacity: 0.94;
+}
+
+.contact-button-primary {
+  background: #ffffff;
+  color: #000000;
+}
+
+.contact-button-secondary {
+  background: rgb(0 0 0 / 5%);
+  color: #ffffff;
+}
+
+.contact-brand {
+  position: relative;
+  width: min(100%, var(--contact-brand-width));
+  margin-top: var(--contact-brand-margin-top);
+  padding-top: 36px;
+}
+
+.contact-signature {
+  position: absolute;
+  left: 50%;
+  bottom: var(--contact-signature-bottom);
+  margin: 0;
+  width: 100%;
+  color: #ffffff;
+  text-align: center;
+  font-family: "Peralta", "Georgia", serif;
+  font-size: var(--contact-signature-size);
+  font-weight: 400;
+  line-height: 71px;
+  transform: translateX(-50%) rotate(-3.84deg);
+  z-index: 1;
+}
+
+.contact-logo {
+  display: block;
+  width: 100%;
+  height: var(--contact-logo-height);
+  object-fit: contain;
+  object-position: center bottom;
+  transform: translateY(var(--contact-logo-bleed));
+}
+
+.contact-mark {
+  position: relative;
+  width: min(100%, var(--contact-brand-width));
+  margin-top: 18px;
+}
+
+.contact-mark-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1200px) {
+  :host {
+    --contact-padding-inline: 40px;
+    --contact-padding-bottom: 0px;
+    --contact-stars-left-width: 250px;
+    --contact-stars-right-width: 250px;
+    /* Ajuste fino do portfolio no tablet/grandes telas */
+    --contact-logo-height: 306px;
+    --contact-logo-bleed: 24px;
+    --contact-signature-size: 46px;
+    --contact-signature-bottom: 188px;
+  }
+}
+
+@media (max-width: 900px) {
+  :host {
+    --contact-padding-top: 32px;
+    --contact-padding-inline: 20px;
+    --contact-padding-bottom: 0px;
+    --contact-stars-left-width: 180px;
+    --contact-stars-left-top: -20px;
+    --contact-stars-left-left: -32px;
+    --contact-stars-right-width: 190px;
+    --contact-stars-right-top: -24px;
+    --contact-stars-right-right: -30px;
+    --contact-cta-padding-inline: 24px;
+    --contact-brand-margin-top: 18px;
+    /* Ajuste fino do portfolio no tablet */
+    --contact-logo-height: 248px;
+    --contact-logo-bleed: 18px;
+    --contact-signature-size: 34px;
+    --contact-signature-bottom: 146px;
+  }
+}
+
+@media (max-width: 620px) {
+  :host {
+    --contact-padding-inline: 16px;
+    --contact-padding-bottom: 0px;
+    --contact-stars-left-width: 120px;
+    --contact-stars-right-width: 126px;
+    --contact-cta-padding-block: 20px;
+    --contact-cta-padding-inline: 0;
+    --contact-cta-gap: 20px;
+    --contact-button-height: 46px;
+    /* Ajuste fino do portfolio no mobile */
+    --contact-logo-height: 164px;
+    --contact-logo-bleed: 12px;
+    --contact-signature-size: 22px;
+    --contact-signature-bottom: 96px;
+  }
+
+  .contact-cta h2 {
+    font-size: 20px;
+    line-height: 1.25;
+  }
+
+  .contact-brand {
+    padding-top: 18px;
+  }
+}

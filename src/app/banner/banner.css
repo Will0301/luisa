@@ -1,0 +1,185 @@
+:host {
+  --banner-padding-top: 100px;
+  --banner-padding-inline: 100px;
+  --banner-padding-bottom: 100px;
+  --banner-title-size: 24px;
+  --brandmark-width: 1100px;
+  --brandmark-margin-top: 78px;
+  --brandmark-min-height: 450px;
+
+  /* Ajuste fino da estrela por aqui. */
+  --star-left: 120px;
+  --star-top: 25px;
+  --star-width: 266px;
+  --star-offset-x: 0px;
+  --star-offset-y: 0px;
+
+  /* Ajuste fino da assinatura por aqui. */
+  --signature-right: -4px;
+  --signature-bottom: 150px;
+  --signature-size: 55px;
+  --signature-offset-x: 0px;
+  --signature-offset-y: 0px;
+  --signature-rotate: -3.84deg;
+
+  display: block;
+}
+
+.banner {
+  min-height: min(834px, calc(100vh - 123.73px));
+  padding:
+    var(--banner-padding-top)
+    var(--banner-padding-inline)
+    var(--banner-padding-bottom);
+  background: #ffffff;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.banner-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: min(100%, var(--brandmark-width));
+  color: #111111;
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--banner-title-size);
+  font-weight: 400;
+  line-height: 1;
+  margin: 0 auto;
+}
+
+.brandmark {
+  position: relative;
+  margin: var(--brandmark-margin-top) auto 0;
+  width: min(100%, var(--brandmark-width));
+  min-height: var(--brandmark-min-height);
+}
+
+.brandmark-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.brandmark-star {
+  position: absolute;
+  left: var(--star-left);
+  top: var(--star-top);
+  width: var(--star-width);
+  height: auto;
+  transform: translate(var(--star-offset-x), var(--star-offset-y));
+}
+
+.brandmark-signature {
+  position: absolute;
+  right: var(--signature-right);
+  bottom: var(--signature-bottom);
+  margin: 0;
+  color: #9900ff;
+  text-align: right;
+  font-family: "Peralta", "Georgia", serif;
+  font-size: var(--signature-size);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  transform:
+    translate(var(--signature-offset-x), var(--signature-offset-y))
+    rotate(var(--signature-rotate));
+  transform-origin: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  width: min(100%, var(--brandmark-width));
+  margin: 30px auto 0;
+}
+
+.buttons span {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 24px;
+  width: auto;
+  min-width: max-content;
+  height: 49px;
+
+  border: 1px solid #000000;
+  border-radius: 999px;
+  background-color: #ffffff;
+  box-shadow: 0 0 40px rgb(0 0 0 / 5%);
+  color: #111111;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+@media (max-width: 960px) {
+  :host {
+    --banner-padding-top: 64px;
+    --banner-padding-inline: 32px;
+    --banner-padding-bottom: 72px;
+    --banner-title-size: 20px;
+    --brandmark-margin-top: 52px;
+    --brandmark-min-height: 300px;
+    --star-left: 74px;
+    --star-top: 20px;
+    --star-width: 180px;
+    --star-offset-x: 0px;
+    --star-offset-y: 0px;
+    --signature-bottom: 0;
+    --signature-size: 40px;
+    --signature-offset-x: 0px;
+    --signature-offset-y: 0px;
+  }
+
+  .banner {
+    min-height: auto;
+  }
+
+  .buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 48px;
+  }
+}
+
+@media (max-width: 560px) {
+  :host {
+    --banner-padding-top: 36px;
+    --banner-padding-inline: 16px;
+    --banner-padding-bottom: 48px;
+    --banner-title-size: 16px;
+    --brandmark-margin-top: 36px;
+    --brandmark-min-height: 170px;
+    --star-left: 32px;
+    --star-top: 8px;
+    --star-width: 84px;
+    --star-offset-x: 0px;
+    --star-offset-y: 0px;
+    --signature-right: -2px;
+    --signature-bottom: -6px;
+    --signature-size: 20px;
+    --signature-offset-x: 0px;
+    --signature-offset-y: 0px;
+  }
+
+  .buttons {
+    gap: 12px;
+    margin-top: 32px;
+  }
+
+  .buttons span {
+    padding-inline: 18px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
