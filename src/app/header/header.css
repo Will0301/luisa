@@ -128,7 +128,7 @@
   opacity: 0.82;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 820px) {
   :host {
     --header-horizontal-padding: 20px;
     --header-gap: 16px;

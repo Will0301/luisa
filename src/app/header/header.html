@@ -1,6 +1,6 @@
 <div class="header" [class.is-menu-open]="isMenuOpen">
   <div class="header-bar">
-    <a class="header-brand" href="/">Luisa Medrado</a>
+    <a class="header-brand" routerLink="/">Luisa Medrado</a>
 
     <button
       class="header-toggle"
@@ -20,7 +20,12 @@
     <ul class="header-menu">
       @for (item of navItems; track item.label) {
         <li class="menu-entry">
-          <a class="menu-item" [href]="item.href" (click)="closeMenu()">
+          <a
+            class="menu-item"
+            [routerLink]="item.route"
+            [fragment]="item.fragment"
+            (click)="closeMenu()"
+          >
             <span class="menu-image-frame">
               <span class="menu-image-mask">
                 <img class="menu-image" [src]="item.image" [alt]="item.alt" />

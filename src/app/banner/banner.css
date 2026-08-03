@@ -184,22 +184,52 @@
   }
 }
 
+@media (max-width: 820px) {
+  :host {
+    --banner-padding-top: 52px;
+    --banner-padding-inline: 24px;
+    --banner-padding-bottom: 60px;
+    --banner-title-size: 18px;
+    --brandmark-width: clamp(620px, 88vw, 700px);
+    --brandmark-margin-top: 42px;
+    --brandmark-min-height: clamp(220px, 34vw, 280px);
+    --star-left: clamp(58px, 10vw, 84px);
+    --star-top: clamp(8px, 2vw, 16px);
+    --star-width: clamp(138px, 21vw, 168px);
+    --signature-right: 0px;
+    --signature-bottom: clamp(44px, 8vw, 70px);
+    --signature-size: clamp(34px, 5.3vw, 40px);
+  }
+
+  .buttons {
+    gap: 14px;
+    margin-top: 36px;
+  }
+
+  .buttons span {
+    font-size: 16px;
+    padding-inline: 16px;
+    height: 44px;
+  }
+}
+
 @media (max-width: 560px) {
   :host {
     --banner-padding-top: 36px;
     --banner-padding-inline: 16px;
     --banner-padding-bottom: 48px;
     --banner-title-size: 16px;
+    --brandmark-width: clamp(272px, 88vw, 430px);
     --brandmark-margin-top: 36px;
-    --brandmark-min-height: 170px;
-    --star-left: 50px;
-    --star-top: 13px;
-    --star-width: 84px;
+    --brandmark-min-height: clamp(108px, 31vw, 170px);
+    --star-left: clamp(30px, 11vw, 50px);
+    --star-top: clamp(5px, 2.8vw, 13px);
+    --star-width: clamp(74px, 20vw, 84px);
     --star-offset-x: 0px;
     --star-offset-y: 0px;
     --signature-right: -2px;
-    --signature-bottom: 50px;
-    --signature-size: 30px;
+    --signature-bottom: clamp(18px, 8vw, 50px);
+    --signature-size: clamp(18px, 5.8vw, 30px);
     --signature-offset-x: 0px;
     --signature-offset-y: 0px;
   }
@@ -217,16 +247,5 @@
     padding-inline: 18px;
     height: 40px;
     font-size: 14px;
-  }
-}
-
-@media (max-width: 400px) {
-  :host {
-    --brandmark-min-height: 100px;
-    --star-left: 30px;
-    --star-top: 5px;
-    --star-width: 74px;
-    --signature-size: 18px;
-    --signature-bottom: 20px;
   }
 }
